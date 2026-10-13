@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact page</title>
+
+    <link rel="stylesheet" href="get-in-touch.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contact-page">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h2>CHAMP</h2>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="register.html">
+                    <i class="fa-regular fa-user"></i>
+                    Account <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Help <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Cart <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+
+        </header>
+
+        <!-- CONTACT CONTENT -->
+        <main class="contact-container">
+
+            <!-- LEFT SIDE -->
+            <section class="contact-info">
+
+                <h1>Contact us!</h1>
+
+                <p class="description">
+                    This is an important feature for building trust and
+                    credibility with our users, as it enables them to access
+                    crucial information and connect with the company to
+                    address their concerns or inquiries. We encourage you
+                    to fill the form and our team will get back to you in
+                    3 business days.
+                </p>
+
+                <div class="info-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>www.champglobal.com</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>+0123 4567 8910</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>725 John Avenue</span>
+                </div>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="social-icons">
+
+                    <a href="#" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- RIGHT SIDE: CONTACT FORM -->
+            <section class="contact-form">
+
+                <form action="#" method="post">
+
+                    <div class="name-fields">
+
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Okanmi" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Olabimpe" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="olabimpe322@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="09063832900">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write a message..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send a Message</button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

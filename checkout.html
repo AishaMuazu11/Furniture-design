@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="checkout-page">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h2>CHAMP</h2>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="register.html">
+                    <i class="fa-regular fa-user"></i>
+                    Account
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-regular fa-circle-question"></i>
+                    Help
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Cart
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+
+        </header>
+
+        <!-- MAIN CHECKOUT -->
+        <main class="checkout-container">
+
+            <!-- PAYMENT FORM -->
+            <section class="payment-section">
+
+                <h3>Checkout</h3>
+
+                <form id="payment-form">
+
+                    <div class="form-group">
+                        <label for="name">Cardholder's Name</label>
+                        <input type="text" id="name" placeholder="Enter cardholder's name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Card's Number</label>
+                        <input type="text" id="card-number" placeholder="Enter card number" inputmode="numeric"
+                            maxlength="19" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-type">Card's Type</label>
+                        <select id="card-type" required>
+                            <option value="" disabled selected>
+                                Select card type
+                            </option>
+                            <option value="debit">Debit Card</option>
+                            <option value="credit">Credit Card</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="expiry">Expiry date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" placeholder="CVV" inputmode="numeric" maxlength="4"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="pay-button">
+                        Pay Now
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- ORDER SUMMARY -->
+            <aside class="order-card">
+
+                <h3>Your Order</h3>
+
+                <!-- ARMCHAIR -->
+                <div class="order-item">
+
+
+                    <div class="product-icon">
+                        <img src="Assets/chair-arm.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Armchair</h4>
+                        <p>Metal legs and wooden frame living room chair</p>
+                    </div>
+
+                    <span class="price">$45.00</span>
+
+                </div>
+
+                <!-- LAMP -->
+                <div class="order-item">
+
+                    <div class="product-icon">
+                        <img src="Assets/lamp.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Hand base Lamp</h4>
+                        <p>Modern lamp design for a living room</p>
+                    </div>
+
+                    <span class="price">$36.00</span>
+
+                </div>
+
+                <!-- BED -->
+                <div class="order-item">
+
+                    <div class="product-icon">
+                        <img src="Assets/bed.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Double Bed</h4>
+                        <p>Wooden bed frame neatly carved for bedroom usage</p>
+                    </div>
+
+                    <span class="price">$450.00</span>
+
+                </div>
+
+                <!-- TOTAL -->
+                <div class="subtotal">
+                    <span>Subtotal</span>
+                    <strong>$531.00</strong>
+                </div>
+
+                <p class="delivery-note">
+                    Delivery fee has been included
+                </p>
+
+                <button type="button" class="checkout-button" onclick="document.getElementById('name').focus()">
+                    Checkout
+                </button>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+    <script>
+        document.getElementById("payment-form").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+                alert("This is a demo checkout page. No payment has been made.");
+            }
+        );
+    </script>
+
+</body>
+
+</html>

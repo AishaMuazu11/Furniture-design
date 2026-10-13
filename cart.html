@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>CHAMP</h2>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#"><i class="fa-regular fa-user"></i> Account
+                    <i class="fa-solid fa-chevron-down"></i></a>
+
+                <a href="#"><i class="fa-regular fa-circle-question"></i> Help
+                    <i class="fa-solid fa-chevron-down"></i></a>
+
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart
+                    <i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="cart-layout">
+
+            <!-- SHOPPING CART -->
+            <section class="shopping-cart">
+
+                <h1>Shopping Cart</h1>
+
+                <!-- PRODUCT 1 -->
+                <div class="cart-item">
+
+                    <div class="product-image">
+                        <img src="Assets/arm-chair.png" alt="">
+                    </div>
+
+                    <div class="product-details">
+                        <h2>Armchair</h2>
+
+                        <p>Metal Legs and wooden<br>
+                            frame living room chair.</p>
+
+                        <div class="product-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <h2>$45.00</h2>
+
+                        <div class="quantity">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PRODUCT 2 -->
+                <div class="cart-item">
+
+                    <div class="product-image">
+                        <img src="Assets/lamp.png" alt="">
+                    </div>
+
+                    <div class="product-details">
+                        <h2>Hand base Lamp</h2>
+
+                        <p>Metal Legs and crystal<br>
+                            lamp for living room.</p>
+
+                        <div class="product-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <h2>$36.00</h2>
+
+                        <div class="quantity">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PRODUCT 3 -->
+                <div class="cart-item">
+
+                    <div class="product-image">
+                        <img src="Assets/bed.png" alt="">
+                    </div>
+
+                    <div class="product-details">
+                        <h2>Double Bed</h2>
+
+                        <p>Wooden bed frame neatly<br>
+                            carved for bedroom usage.</p>
+
+                        <div class="product-icons">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-trash-can"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-price">
+                        <h2>$450.00</h2>
+
+                        <div class="quantity">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- CART SUMMARY -->
+            <aside class="cart-summary">
+
+                <h2>Cart Summary</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong>$551.00</strong>
+                </div>
+
+                <p class="delivery-note">
+                    Deliver fee has been included
+                </p>
+
+                <div class="returns">
+                    <h3>Returns are easy</h3>
+
+                    <p>Free returns within 1-2 weeks of<br>
+                        purchase</p>
+                </div>
+
+                <button class="checkout-btn">Checkout</button>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

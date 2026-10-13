@@ -1,0 +1,310 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-page {
+    width: 100%;
+    padding: 35px 7%;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 65px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo a {
+    font-size: 16px;
+    color: #222222;
+}
+
+.logo h2 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.nav-links,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    font-size: 12px;
+    color: #333333;
+}
+
+.nav-links .active {
+    color: #111111;
+    font-weight: 600;
+}
+
+.nav-right {
+    gap: 18px;
+}
+
+.nav-right a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-right i {
+    font-size: 11px;
+}
+
+/* MAIN CONTACT SECTION */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 55px;
+    padding: 0 20px;
+}
+
+/* LEFT SIDE */
+.contact-info {
+    flex: 1;
+    padding-top: 15px;
+}
+
+.contact-info h1 {
+    font-size: 24px;
+    margin-bottom: 28px;
+    font-weight: 600;
+}
+
+.description {
+    max-width: 430px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #888888;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.info-item i {
+    font-size: 15px;
+    color: #666666;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.instagram {
+    color: #e4405f;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.facebook {
+    color: #1877f2;
+}
+
+/* CONTACT FORM CARD */
+.contact-form {
+    flex: 1;
+    max-width: 480px;
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.name-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 12px;
+    margin-bottom: 9px;
+    color: #333333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+.form-group input {
+    height: 40px;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #285b54;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+/* SEND BUTTON */
+.contact-form button {
+    display: block;
+    margin-left: auto;
+    padding: 13px 20px;
+    background-color: #285b54;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #1d443e;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .contact-page {
+        padding: 30px 4%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .nav-links,
+    .nav-right {
+        gap: 15px;
+    }
+
+    .contact-container {
+        gap: 30px;
+        padding: 0;
+    }
+
+    .contact-form {
+        padding: 25px 18px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .contact-page {
+        padding: 25px 6%;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info h1 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: none;
+    }
+
+    .name-fields {
+        gap: 12px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}

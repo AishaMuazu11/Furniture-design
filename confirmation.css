@@ -1,0 +1,403 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8%;
+    gap: 25px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo a {
+    font-size: 16px;
+    color: #294f4d;
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+    color: #315b58;
+}
+
+.nav-right {
+    gap: 18px;
+}
+
+.nav-right i {
+    font-size: 10px;
+}
+
+/* MAIN CONTAINER */
+.confirmation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 55px 8%;
+}
+
+/* LEFT SECTION */
+.confirmation-details {
+    flex: 1.2;
+    padding-top: 10px;
+}
+
+.confirmation-details h3,
+.summary-section > h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.thank-you {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 18px;
+}
+
+/* PROGRESS TRACKER */
+.progress {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 45px;
+    width: 100%;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.step-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: white;
+}
+
+.completed {
+    background-color: #b8ced2;
+}
+
+.current {
+    background-color: #829397;
+}
+
+.progress-line {
+    height: 2px;
+    background-color: #b8ced2;
+    flex: 1;
+    margin-top: 8px;
+}
+
+.progress-step p {
+    font-size: 10px;
+    color: #777777;
+    margin-top: 18px;
+    white-space: nowrap;
+}
+
+/* ORDER NUMBER */
+.order-number {
+    font-size: 12px;
+    margin-top: 45px;
+}
+
+.order-number strong {
+    font-weight: 400;
+}
+
+/* BUTTONS */
+.confirmation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 90px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.shop-btn {
+    background-color: #2d5553;
+    color: #ffffff;
+    border: 1px solid #2d5553;
+}
+
+.shop-btn:hover {
+    background-color: #1e403e;
+}
+
+.home-btn {
+    border: 1px solid #a5b4b3;
+    color: #222222;
+    background-color: #ffffff;
+}
+
+.home-btn:hover {
+    background-color: #f5f8f7;
+}
+
+/* SUMMARY SECTION */
+.summary-section {
+    flex: 0.9;
+}
+
+.summary-section > h3 {
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* PRODUCT ITEMS */
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.product-icon {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+.product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-info h4 {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.product-info p {
+    font-size: 9px;
+    color: #888888;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* SUBTOTAL */
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subtotal h4 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.subtotal strong {
+    font-size: 13px;
+}
+
+.delivery-note {
+    font-size: 10px;
+    color: #999999;
+    margin-top: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 22px 5%;
+        flex-wrap: wrap;
+    }
+
+    .nav-links,
+    .nav-right {
+        gap: 15px;
+    }
+
+    .confirmation-container {
+        padding: 45px 5%;
+        gap: 35px;
+    }
+
+    .confirmation-details h3 {
+        font-size: 16px;
+    }
+
+    .summary-card {
+        padding: 15px;
+    }
+
+    .summary-item {
+        gap: 8px;
+    }
+
+    .product-icon {
+        width: 45px;
+        min-width: 45px;
+        font-size: 25px;
+    }
+}
+
+/* TABLETS AND PHONES */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px 5%;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .nav-links,
+    .nav-right {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .confirmation-container {
+        flex-direction: column;
+        padding: 35px 5%;
+        gap: 45px;
+    }
+
+    .confirmation-details,
+    .summary-section {
+        width: 100%;
+    }
+
+    .confirmation-details h3 {
+        line-height: 1.6;
+    }
+
+    .progress-step p {
+        font-size: 9px;
+    }
+
+    .confirmation-buttons {
+        margin-top: 50px;
+    }
+
+    .summary-card {
+        padding: 20px;
+    }
+
+    .product-icon {
+        width: 55px;
+        min-width: 55px;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+    .nav-links,
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-links a,
+    .nav-right a {
+        font-size: 11px;
+    }
+
+    .progress-step p {
+        font-size: 8px;
+    }
+
+    .summary-item {
+        gap: 8px;
+    }
+
+    .product-icon {
+        width: 35px;
+        min-width: 35px;
+        font-size: 23px;
+    }
+
+    .product-info p {
+        font-size: 8px;
+    }
+
+    .price {
+        font-size: 10px;
+    }
+}

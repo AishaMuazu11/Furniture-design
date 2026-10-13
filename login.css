@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e7e7;
+    min-height: 100vh;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #292929;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.navbar h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.menu {
+    position: absolute;
+    left: 30px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Main white box */
+.login-container {
+    background-color: white;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 80px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Chair image */
+.chair-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chair-section img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Form section */
+.form-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 35px;
+    color: #111;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #999;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    border-color: #315c58;
+}
+
+/* Forgot password */
+.forgot-password {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2e5753;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login-btn:hover {
+    background-color: #234541;
+}
+
+/* Sign-up link */
+.signup-text {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 25px;
+    color: #333;
+}
+
+.signup-text a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+    .menu {
+        left: 15px;
+        font-size: 24px;
+    }
+
+    .login-container {
+        width: 92%;
+        margin: 60px auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .chair-section img {
+        max-width: 260px;
+    }
+
+    .form-section {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .form-section h2 {
+        margin-bottom: 25px;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery details</title>
+
+    <link rel="stylesheet" href="delivery.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" </head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+
+        <!-- <a href="index.html" class="logo">
+            &#8592; <span>CHAMP</span>
+        </a> -->
+
+        <div class="logo">
+            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2>CHAMP</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+
+        <div class="nav-right">
+            <a href="#"><i class="fa-regular fa-user"></i> Account
+                <i class="fa-solid fa-chevron-down"></i></a>
+
+            <a href="#"><i class="fa-regular fa-circle-question"></i> Help
+                <i class="fa-solid fa-chevron-down"></i></a>
+
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart
+                <i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+
+    </header>
+
+    <!-- Main delivery section -->
+    <main class="delivery-container">
+
+        <!-- Delivery form -->
+        <section class="delivery-form">
+
+            <h3>Delivery Details</h3>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="state">State</label>
+
+                    <select id="state" name="state" required>
+                        <option value="">Select state</option>
+                        <option value="Ogun" selected>Ogun</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Kwara">Kwara</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="Abuja">Abuja</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lga">Local Government Area</label>
+
+                    <select id="lga" name="lga" required>
+                        <option value="">Select local government</option>
+                        <option value="Abeokuta South" selected>
+                            Abeokuta South
+                        </option>
+                        <option value="Abeokuta North">
+                            Abeokuta North
+                        </option>
+                        <option value="Ifo">Ifo</option>
+                        <option value="Sagamu">Sagamu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+
+                    <input type="text" id="address" name="address" placeholder="Pro Hub, Idi-aba, Abeokuta" required>
+                </div>
+
+                <h3 class="delivery-question">
+                    How do you want your delivery?
+                </h3>
+
+                <div class="delivery-options">
+
+                    <label>
+                        Door Delivery
+                        <input type="radio" name="delivery" value="door" checked>
+                    </label>
+
+                    <label>
+                        Pick-up Station
+                        <input type="radio" name="delivery" value="pickup">
+                    </label>
+
+                </div>
+
+                <button type="submit" class="next-btn">
+                    Next
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Order summary -->
+        <aside class="order-summary">
+
+            <h3>Your Order</h3>
+
+            <div class="order-item">
+
+                <div class="product-image">
+                    <img src="Assets/chair-arm.png" alt="Armchair">
+                </div>
+
+                <div class="product-info">
+                    <h4>Armchair</h4>
+                    <p>Metal Legs and wooden frame living room chair.</p>
+                </div>
+
+            </div>
+
+            <div class="order-item">
+
+                <div class="product-image">
+                    <img src="Assets/lamp.png" alt="Hand base lamp">
+                </div>
+
+                <div class="product-info">
+                    <h4>Hand base Lamp</h4>
+                    <p>Metal legs and crystal lamp for living room.</p>
+                </div>
+
+            </div>
+
+            <div class="order-item">
+
+                <div class="product-image">
+                    <img src="Assets/bed.png" alt="Double bed">
+                </div>
+
+                <div class="product-info">
+                    <h4>Double Bed</h4>
+                    <p>Wooden bed frame neatly carved for bedroom usage.</p>
+                </div>
+
+            </div>
+
+            <button type="button" class="checkout-btn">
+                Checkout
+            </button>
+
+
+            <!-- <button type="button" class="checkout-btn" onclick="window.location.href='Checkout.html'">
+                Checkout
+            </button> -->
+
+            <!-- <button type="button" onclick="alert('The button is working!')">
+                Checkout
+            </button> -->
+
+        </aside>
+
+    </main>
+
+</body>
+
+</html>

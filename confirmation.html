@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Confirmation | CHAMP</title>
+
+    <link rel="stylesheet" href="confirmation.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h2>CHAMP</h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="register.html">
+                <i class="fa-regular fa-user"></i> Account
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-circle-question"></i> Help
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i> Cart
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- CONFIRMATION PAGE -->
+    <main class="confirmation-container">
+
+        <!-- LEFT SIDE -->
+        <section class="confirmation-details">
+
+            <h3>Your Furniture payment have been confirmed</h3>
+
+            <p class="thank-you">
+                Thank you for your patronage of our exquisite Furniture.
+            </p>
+
+            <!-- PROGRESS TRACKER -->
+            <div class="progress">
+
+                <div class="progress-step">
+                    <span class="step-icon completed">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <p>Furniture selected</p>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span class="step-icon completed">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <p>Payment received</p>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <span class="step-icon current">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <p>Incoming delivery</p>
+                </div>
+
+            </div>
+
+            <p class="order-number">
+                Your confirmation Number is
+                <strong>#26178-879766</strong>
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="confirmation-buttons">
+                <a href="products.html" class="btn shop-btn">
+                    Shop more
+                </a>
+
+                <a href="index.html" class="btn home-btn">
+                    Back to Homepage
+                </a>
+            </div>
+
+        </section>
+
+        <!-- RIGHT SIDE -->
+        <section class="summary-section">
+
+            <h3>Furniture summary</h3>
+
+            <div class="summary-card">
+
+                <!-- ITEM 1 -->
+                <div class="summary-item">
+
+                    <div class="product-icon chair">
+                        <img src="Assets/arm-chair.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Armchair</h4>
+                        <p>Metal legs and wooden frame living room chair</p>
+                    </div>
+
+                    <strong class="price">$45.00</strong>
+
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="summary-item">
+
+                    <div class="product-icon lamp">
+                        <img src="Assets/lamp.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Hand base Lamp</h4>
+                        <p>Metal lamp and crystal light for living room</p>
+                    </div>
+
+                    <strong class="price">$36.00</strong>
+
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="summary-item">
+
+                    <div class="product-icon bed">
+                        <img src="Assets/bed.png" alt="">
+                    </div>
+
+                    <div class="product-info">
+                        <h4>Double Bed</h4>
+                        <p>Wooden bed frame neatly carved for bedroom usage</p>
+                    </div>
+
+                    <strong class="price">$450.00</strong>
+
+                </div>
+
+                <!-- TOTAL -->
+                <div class="subtotal">
+                    <h4>Subtotal</h4>
+                    <strong>$531.00</strong>
+                </div>
+
+                <p class="delivery-note">
+                    Delivery fee have been included
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
