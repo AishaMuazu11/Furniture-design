@@ -293,81 +293,55 @@ button {
     text-decoration: underline;
 }
 
-/* TABLETS AND MOBILE PHONES */
-
-@media (max-width: 1000px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        padding: 25px 5%;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .nav-actions {
-        gap: 12px;
-    }
-
-    .product-page {
-        grid-template-columns: 1fr 1fr;
-        padding: 30px 5%;
-    }
-
-    .product-gallery {
-        grid-template-columns: minmax(0, 1fr) 65px;
-        gap: 12px;
-    }
-
-    .main-image img {
-        height: 350px;
-    }
-
-    .thumbnail-images img {
-        width: 65px;
-        height: 65px;
-    }
-
-    .recent-products {
-        gap: 12px;
-    }
-
-    .recent-card img {
-        height: 110px;
-    }
-
-    .purchase-buttons {
-        gap: 12px;
-        margin-bottom: 50px;
-    }
-}
-
+/* MOBILE SCREEN */
 @media (max-width: 650px) {
-
-    .navbar {
+        .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         justify-content: space-between;
         padding: 20px 5%;
+        gap: 20px 10px;
     }
 
     .logo {
-        font-size: 19px;
-        gap: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        white-space: nowrap;
     }
 
-    .nav-links {
-        width: 100%;
-        justify-content: space-between;
-        order: 3;
-        padding-top: 10px;
+    .back-arrow {
+        font-size: 24px;
     }
 
     .nav-actions {
-        gap: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
     }
 
     .nav-actions a {
         font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        order: 3;
+        gap: 15px;
+        padding-top: 10px;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        white-space: nowrap;
     }
 
     .product-page {
@@ -381,6 +355,7 @@ button {
 
     .product-gallery {
         grid-template-columns: minmax(0, 1fr) 65px;
+        gap: 12px;
     }
 
     .main-image img {

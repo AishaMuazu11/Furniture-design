@@ -140,40 +140,83 @@ body {
     font-weight: bold;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* MOBILE SCREEN */
+@media screen and (max-width: 600px) {
 
     .navbar {
-        padding: 18px;
+        padding: 1rem;
     }
 
     .navbar h2 {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .menu {
-        left: 15px;
-        font-size: 24px;
+        left: 1rem;
+        font-size: 1.5rem;
     }
 
     .login-container {
-        width: 92%;
-        margin: 60px auto;
-        padding: 25px;
         flex-direction: column;
-        gap: 30px;
+        width: 100%;
+        margin: 1.25rem auto 2rem;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .chair-section {
+        width: 100%;
     }
 
     .chair-section img {
-        max-width: 260px;
+        width: 100%;
+        max-width: 11rem;
+        height: auto;
     }
 
     .form-section {
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .form-section h2 {
-        margin-bottom: 25px;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
     }
+
+    .input-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .input-group label {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .forgot-password {
+        margin-top: -0.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .forgot-password a {
+        font-size: 0.75rem;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    .signup-text {
+        font-size: 0.75rem;
+        margin-top: 1.25rem;
+    }
+
 }
