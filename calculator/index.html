@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Responsive Calculator</title> -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .calculator {
+            width: 100%;
+            max-width: 350px;
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        #display {
+            width: 100%;
+            height: 80px;
+            background: #2b2b2b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            text-align: right;
+            padding: 15px;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 60px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            background: #3a3a3a;
+            color: white;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .operator {
+            background: #ff9500;
+        }
+
+        .clear {
+            background: #a5a5a5;
+            color: black;
+        }
+
+        .equal {
+            background: #28a745;
+            grid-column: span 2;
+        }
+
+        @media (max-width: 400px) {
+            .calculator {
+                padding: 12px;
+            }
+
+            button {
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            #display {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">AC</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button class="operator" onclick="chooseOperator('%')">%</button>
+            <button class="operator" onclick="chooseOperator('/')">÷</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="chooseOperator('*')">×</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="chooseOperator('-')">−</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="chooseOperator('+')">+</button>
+
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+
+        let currentValue = "0";
+        let previousValue = null;
+        let operator = null;
+        let resetDisplay = false;
+
+        function updateDisplay() {
+            display.value = currentValue;
+        }
+
+        function appendNumber(number) {
+            if (resetDisplay || currentValue === "Error") {
+                currentValue = number;
+                resetDisplay = false;
+            } else if (currentValue === "0") {
+                currentValue = number;
+            } else {
+                currentValue += number;
+            }
+
+            updateDisplay();
+        }
+
+        function appendDecimal() {
+            if (resetDisplay || currentValue === "Error") {
+                currentValue = "0.";
+                resetDisplay = false;
+            } else if (!currentValue.includes(".")) {
+                currentValue += ".";
+            }
+
+            updateDisplay();
+        }
+
+        function chooseOperator(selectedOperator) {
+            if (currentValue === "Error") return;
+
+            if (selectedOperator === "%") {
+                currentValue = String(Number(currentValue) / 100);
+                updateDisplay();
+                return;
+            }
+
+            if (operator !== null && !resetDisplay) {
+                calculate();
+            }
+
+            previousValue = Number(currentValue);
+            operator = selectedOperator;
+            resetDisplay = true;
+        }
+
+        function calculate() {
+            if (operator === null || previousValue === null) return;
+
+            const secondValue = Number(currentValue);
+            let result;
+
+            switch (operator) {
+                case "+":
+                    result = previousValue + secondValue;
+                    break;
+                case "-":
+                    result = previousValue - secondValue;
+                    break;
+                case "*":
+                    result = previousValue * secondValue;
+                    break;
+                case "/":
+                    result = secondValue === 0
+                        ? "Error"
+                        : previousValue / secondValue;
+                    break;
+            }
+
+            currentValue = result === "Error"
+                ? "Error"
+                : String(Number(result.toPrecision(12)));
+
+            previousValue = null;
+            operator = null;
+            resetDisplay = true;
+
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentValue = "0";
+            previousValue = null;
+            operator = null;
+            resetDisplay = false;
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            if (resetDisplay || currentValue === "Error") {
+                currentValue = "0";
+                resetDisplay = false;
+            } else {
+                currentValue = currentValue.length > 1
+                    ? currentValue.slice(0, -1)
+                    : "0";
+            }
+
+            updateDisplay();
+        }
+    </script>
+
+</body>
+
+</html>
